@@ -11,5 +11,4 @@ whitenoise==4.1
 django-heroku
 braintree
 eventlet # for windows
-pika==0.9.14
 
