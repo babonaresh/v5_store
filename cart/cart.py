@@ -1,6 +1,10 @@
 from decimal import Decimal
 from django.conf import settings
 from shop.models import Product
+<<<<<<< HEAD
+from coupons.models import Coupon
+=======
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
 
 
 class Cart(object):
@@ -15,6 +19,11 @@ class Cart(object):
             # save an empty cart in the session
             cart = self.session[settings.CART_SESSION_ID] = {}
         self.cart = cart
+<<<<<<< HEAD
+        # store current applied coupon
+        self.coupon_id = self.session.get('coupon_id')
+=======
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
 
     def __iter__(self):
         """
@@ -85,3 +94,21 @@ class Cart(object):
         # remove cart from session
         del self.session[settings.CART_SESSION_ID]
         self.save()
+<<<<<<< HEAD
+
+    @property
+    def coupon(self):
+        if self.coupon_id:
+            return Coupon.objects.get(id=self.coupon_id)
+        return None
+
+    def get_discount(self):
+        if self.coupon:
+            return (self.coupon.discount / Decimal('100')) \
+                * self.get_total_price()
+        return Decimal('0')
+
+    def get_total_price_after_discount(self):
+        return self.get_total_price() - self.get_discount()
+=======
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
