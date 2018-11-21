@@ -10,12 +10,4 @@ urllib3==1.23
 whitenoise==4.1
 django-heroku
 braintree
-<<<<<<< HEAD
 eventlet # for windows 
-=======
-eventlet # for windows
-<<<<<<< HEAD
-=======
->>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
-
->>>>>>> 733ce9d16938f07615899aec70f5cedd203edb9f
