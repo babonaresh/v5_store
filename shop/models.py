@@ -1,6 +1,8 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.urls import reverse
+import django_filters
+
 SIZE_CHOICES = [(j, str(j)) for j in ['XS','S','M','L','XL','XXL']]
 COLOR_CHOICES = [(k, str(k)) for k in ['Green','Blue','Red','Orange','Yellow','Black','White']]
 
@@ -66,3 +68,8 @@ class Product(models.Model):
     def get_absolute_url(self):
             return reverse('shop:product_detail',
                            args=[self.id, self.slug])
+
+class ProductFilter(django_filters.FilterSet):
+    class Meta:
+        model = Product
+        fields = ['name', 'price']

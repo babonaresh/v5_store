@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
+    'django_filters',
+    'haystack',
 ]
 
 
@@ -93,6 +95,13 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr/blog'
+                },
+ }
 
 #DEBUG = True
 
