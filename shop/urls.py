@@ -5,7 +5,10 @@ from django.contrib.auth import views as auth_views
 from django.urls import path
 from . import views
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
 app_name = 'shop'
 
 urlpatterns = [
@@ -28,5 +31,8 @@ urlpatterns = [
          name='product_list_by_category'),
     path('<int:id>/<slug:slug>/', views.product_detail,
          name='product_detail'),
+<<<<<<< HEAD
     url(r'^search/$', views.product_search, name='product_search'),
+=======
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
 ]

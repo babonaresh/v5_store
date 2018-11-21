@@ -3,7 +3,10 @@ from django.views.decorators.http import require_POST
 from shop.models import Product
 from .cart import Cart
 from .forms import CartAddProductForm
+<<<<<<< HEAD
 from coupons.forms import CouponApplyForm
+=======
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
 
 
 @require_POST
@@ -33,6 +36,7 @@ def cart_remove(request, product_id):
 def cart_detail(request):
     cart = Cart(request)
     for item in cart:
+<<<<<<< HEAD
         item['update_quantity_form'] = CartAddProductForm(
                             initial={'quantity': item['quantity'],
                             'size': item['size'],'color':item['color'],
@@ -44,3 +48,10 @@ def cart_detail(request):
                   'cart/detail.html',
                   {'cart': cart,
                    'coupon_apply_form' : coupon_apply_form})
+=======
+            item['update_quantity_form'] = CartAddProductForm(
+                              initial={'quantity': item['quantity'],
+                              'size': item['size'],'color':item['color'],
+                              'update': True})
+    return render(request, 'cart/detail.html', {'cart': cart})
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db

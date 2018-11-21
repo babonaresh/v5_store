@@ -13,6 +13,7 @@
       {% for item in cart %}
         <li>
           {{ item.quantity }}x {{ item.product.name }}
+<<<<<<< HEAD
           <span>${{ item.total_price|floatformat:"2" }}</span>
         </li>
       {% endfor %}
@@ -24,6 +25,13 @@
       {% endif %}
     </ul>
     <p>Total: ${{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
+=======
+          <span>${{ item.total_price }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+    <p>Total: ${{ cart.get_total_price }}</p>
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
   </div>
 
   <form action="." method="post" class="order-form">

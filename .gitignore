@@ -6,3 +6,7 @@ myvenv
 /static
 .DS_Store
 .idea/workspace.xml
+<<<<<<< HEAD
+=======
+local_settings.py
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db

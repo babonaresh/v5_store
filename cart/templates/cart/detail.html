@@ -47,6 +47,7 @@
           </tr>
         {% endwith %}
       {% endfor %}
+<<<<<<< HEAD
       {% if cart.coupon %}
         <tr class="subtotal">
           <td>Subtotal</td>
@@ -79,6 +80,15 @@
     <input type="submit" value="Apply">
     {% csrf_token %}
   </form>
+=======
+      <tr class="total">
+        <td>Total</td>
+        <td colspan="6"></td>
+        <td class="num">${{ cart.get_total_price }}</td>
+      </tr>
+    </tbody>
+  </table>
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
   <p class="text-right">
     <a href="{% url "shop:product_list" %}" class="button light">Continue shopping</a>
     <a href="{% url "orders:order_create" %}" class="button">

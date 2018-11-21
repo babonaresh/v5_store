@@ -45,9 +45,12 @@ INSTALLED_APPS = [
     'mathfilters',
     'django.contrib.humanize',
     'payment.apps.PaymentConfig',
+<<<<<<< HEAD
     'coupons.apps.CouponsConfig',
     'django_filters',
     'haystack',
+=======
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
 ]
 
 
@@ -88,14 +91,22 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.postgresql',
+<<<<<<< HEAD
         'NAME': 'd502tva6vm7jr7',
         'USER': 'klvsvbcylupzmd',
         'PASSWORD': '2d51299dcc3922f5606d942c8dba4be56e3566c8960f401904c8e547bd5d19e1',
         'HOST': 'ec2-107-20-193-206.compute-1.amazonaws.com',
+=======
+        'NAME': 'dak8h75dm3jugk',
+        'USER': 'ljemznyewxafyy',
+        'PASSWORD': '7927698e3e4e89983dd9f8e6d655eb98d688ef2e75990747eabc6912ecffe302',
+        'HOST': 'ec2-54-243-147-183.compute-1.amazonaws.com',
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
         'PORT': '5432',
     }
 }
 
+<<<<<<< HEAD
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
@@ -103,6 +114,8 @@ HAYSTACK_CONNECTIONS = {
                 },
  }
 
+=======
+>>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
 #DEBUG = True
 
 
