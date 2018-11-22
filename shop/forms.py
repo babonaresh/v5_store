@@ -20,10 +20,3 @@ class UserEditForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email')
-
-<<<<<<< HEAD
-class SearchForm(forms.Form):
-    query = forms.CharField()
-=======
-
->>>>>>> dc0b92a691b20f4bfd343a495d8e0c2d24f472db
