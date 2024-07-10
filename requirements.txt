@@ -13,3 +13,4 @@ django-heroku
 braintree
 eventlet # for windows 
 django_filters
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
